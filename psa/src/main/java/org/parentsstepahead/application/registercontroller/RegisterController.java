@@ -14,5 +14,12 @@ public class RegisterController {
         return "login";
 
     }
+    
+    @GetMapping("/registrationForm")
+    public String showRegistrationForm(){
+
+        return "registrationForm";
+
+    }
 
 }
