@@ -1,14 +1,22 @@
-/*
 body{
-    background-color: rgb(25,80,50);
+    background-image: url("../img/bg1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+               
 }
-*/
 
-body{
-    background-color: #3b4768;
+.bluebg{
+    background-color: #3c7aaf;
 }
 
-
-h1{
-    color: white;
+.border{
+	border-radius: 15px;
 }
+
+img {
+    width: 100%;
+    height: auto;
+}
+

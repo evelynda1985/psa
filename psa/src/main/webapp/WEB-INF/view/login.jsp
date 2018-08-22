@@ -16,7 +16,7 @@
 	crossorigin="anonymous">
 
 <!--  -->
-<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet"> 
+<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 
 
 
@@ -24,30 +24,40 @@
 </head>
 <body>
 
-	<br><br>
+	<br>
+	<br>
 
 	<div class="container">
 
 		<div class="row justify-content-md-center">
 			<div class="col col-lg-2"></div>
 
-			<div class="col-md-auto">
+			<div class="col-md-auto bluebg border text-white">
+			
+			<div class="img">
+				<img src="../psa/resources/img/logo.png" alt="logo">
+			</div>
 
 				<form>
 					<div class="form-group">
-						<label for="username">Phone Number</label> <input
-							type="email" class="form-control" id="username"
-							aria-describedby="emailHelp" placeholder="Enter your phone number"> <small
-							id="emailHelp" class="form-text text-muted">We'll never
-							share your phone number with anyone else.</small>
+						<label for="username">Phone Number</label> <input type="email"
+							class="form-control" id="username" aria-describedby="emailHelp"
+							placeholder="Enter your phone number"> 
+							
+							<small> <p class="text-white">We'll never
+							share your information with anyone else.</p></small>
+							
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Password</label> <input
 							type="password" class="form-control" id="exampleInputPassword1"
 							placeholder="Password">
 					</div>
-					<button type="button" class="btn btn-primary"onclick="window.location.href='registrationForm'; return false;">Submit</button>
-					
+					<button type="button" class="btn btn-primary"
+						onclick="window.location.href='registrationForm'; return false;">Submit</button>
+						
+						<br><br>
+
 				</form>
 
 			</div>

@@ -21,5 +21,12 @@ public class RegisterController {
         return "registrationForm";
 
     }
+    
+    @GetMapping("/childrenInformation")
+    public String showchildrenInformation(){
+
+        return "childrenInformation";
+
+    }
 
 }
