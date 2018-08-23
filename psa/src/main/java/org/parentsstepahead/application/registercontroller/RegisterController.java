@@ -42,5 +42,26 @@ public class RegisterController {
         return "childForm";
 
     }
+    
+    @GetMapping("/forgotPassword")
+    public String showForgotPasswordForm(){
+
+        return "forgotPassword";
+
+    }
+    
+    @GetMapping("/resetPassword")
+    public String showResetPasswordForm(){
+
+        return "resetPassword";
+
+    }
+    
+    @GetMapping("/homeApp")
+    public String showHomeApp(){
+
+        return "homeApp";
+
+    }
 
 }

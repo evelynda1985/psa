@@ -15,9 +15,14 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 
+
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+	integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+	crossorigin="anonymous">
+
 <!--  -->
 <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
-
 
 
 <title>Parents Step Ahead Login page</title>
@@ -33,45 +38,42 @@
 			<div class="col col-lg-2"></div>
 
 			<div class="col-md-auto bluebg border text-white">
-			
-			<div class="img">
-				<img src="../psa/resources/img/logo.png" alt="logo">
-			</div>
 
-				<form>
-					<div class="form-group">
-						<label for="username">Phone Number</label> <input type="email"
-							class="form-control" id="username" aria-describedby="emailHelp"
-							placeholder="Enter your phone number"> 
-							
-							<small> <p class="text-white">We'll never
-							share your information with anyone else.</p></small>
-							
-					</div>
-					<div class="form-group">
-						<label for="exampleInputPassword1">Password</label> <input
-							type="password" class="form-control" id="exampleInputPassword1"
-							placeholder="Password">
-						
-						<div class="row mx-auto" style="width: 300px;">
-							<div class="col-md-6">
-								<a href="/psa/forgotPassword" class="text-white">Forgot Password</a>
-							</div>
-							
-							<div class="col-md-6">
-								<a href="/psa/registrationForm" class="text-white">Create Account</a>
+				<div class="container">
+					<div class="row">
+						<div class="col"></div>
+
+						<div class="col">
+							<div class="img">
+								<img src="../psa/resources/img/logo.png" alt="logo">
 							</div>
 						</div>
-							
-					</div>
-					
-										
-					<button type="button" class="btn btn-primary"
-					onclick="window.location.href='homeApp'; return false;">Login</button>
-						
-						<br><br>
 
-				</form>
+						<div class="col"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="container">
+					<div class="row mx-auto" >
+						<div class="col"></div>
+						<div class="col">
+							<h1>
+								<i class="far fa-address-card "></i>
+							</h1>
+							<p>My Profile</p>
+						</div>
+						<div class="col col-lg-2"></div>
+
+						<div class="col">
+							<h1>
+								<i class="far fa-clipboard"></i>
+							</h1>
+							<p>Parent's List</p>
+						</div>
+						<div class="col"></div>
+					</div>
+				</div>
 
 			</div>
 

@@ -33,43 +33,31 @@
 			<div class="col col-lg-2"></div>
 
 			<div class="col-md-auto bluebg border text-white">
-			
-			<div class="img">
-				<img src="../psa/resources/img/logo.png" alt="logo">
-			</div>
+
+				<div class="img">
+					<img src="../psa/resources/img/logo.png" alt="logo">
+				</div>
 
 				<form>
 					<div class="form-group">
-						<label for="username">Phone Number</label> <input type="email"
-							class="form-control" id="username" aria-describedby="emailHelp"
-							placeholder="Enter your phone number"> 
-							
-							<small> <p class="text-white">We'll never
-							share your information with anyone else.</p></small>
-							
-					</div>
-					<div class="form-group">
-						<label for="exampleInputPassword1">Password</label> <input
+						<label for="exampleInputPassword1">New Password</label> <input
 							type="password" class="form-control" id="exampleInputPassword1"
-							placeholder="Password">
-						
-						<div class="row mx-auto" style="width: 300px;">
-							<div class="col-md-6">
-								<a href="/psa/forgotPassword" class="text-white">Forgot Password</a>
-							</div>
+							placeholder="New Password"> <label
 							
-							<div class="col-md-6">
-								<a href="/psa/registrationForm" class="text-white">Create Account</a>
-							</div>
-						</div>
 							
+							for="exampleInputPassword1">Repeat Password</label> <input
+							type="password" class="form-control" id="exampleInputPassword1"
+							placeholder="Repeat Password">
+
+
 					</div>
-					
-										
-					<button type="button" class="btn btn-primary"
-					onclick="window.location.href='homeApp'; return false;">Login</button>
-						
-						<br><br>
+
+
+
+					<button type="button" class="btn btn-primary">Login</button>
+
+					<br>
+					<br>
 
 				</form>
 
