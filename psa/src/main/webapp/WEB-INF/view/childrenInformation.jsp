@@ -84,7 +84,8 @@
 						</tbody>
 					</table>
 
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="submit" class="btn btn-primary"
+					onclick="window.location.href='homeApp'; return false;">Submit</button>
 					<br><br>
 
 				</form>
