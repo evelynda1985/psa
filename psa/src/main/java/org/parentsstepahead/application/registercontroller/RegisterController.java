@@ -22,10 +22,24 @@ public class RegisterController {
 
     }
     
+    @GetMapping("/registrationForm2")
+    public String showRegistrationForm2(){
+
+        return "registrationForm2";
+
+    }
+    
     @GetMapping("/childrenInformation")
-    public String showchildrenInformation(){
+    public String showChildrenInformation(){
 
         return "childrenInformation";
+
+    }
+    
+    @GetMapping("/childForm")
+    public String showChildForm(){
+
+        return "childForm";
 
     }
 

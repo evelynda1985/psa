@@ -36,7 +36,7 @@
 			<div class="col col-lg-2"></div>
 
 			<div class="col-md-auto bluebg border text-white ">
-			<br>
+				<br>
 				<h3>Registration Form</h3>
 				<small>
 					<p class="text-white">We'll never share your information with
@@ -46,83 +46,52 @@
 				<form>
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputEmail4">First Name</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="First Name">
+							<label for="inputEmail4">Phone Number</label> <input type="email"
+								class="form-control" id="inputEmail4" placeholder="Phone Number">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputPassword4">Last Name</label> <input
-								type="password" class="form-control" id="inputPassword4"
-								placeholder="Last Name">
+							<label for="inputPassword4">email</label> <input type="password"
+								class="form-control" id="inputPassword4" placeholder="email">
 						</div>
 					</div>
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputState">Gender</label> <select id="inputState"
+							<label for="inputEmail4">Address</label> <input type="email"
+								class="form-control" id="inputEmail4" placeholder="Address">
+						</div>
+
+						<div class="form-group col-md-6">
+							<label for="inputState">State</label> <select id="inputState"
 								class="form-control">
 								<option selected>Choose...</option>
-								<option>Female</option>
-								<option>Male</option>
-								<option>Other</option>
-							</select>
-						</div>
-						<div class="form-group col-md-6">
-							<label for="inputState">Civil status</label> <select
-								id="inputState" class="form-control">
-								<option selected>Choose...</option>
-								<option>Single</option>
-								<option>Married</option>
-								<option>Divorced</option>
-								<option>Widow</option>
-								<option>common-law marriage</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<label for="inputState">Country of origin</label> <select
-								id="inputState" class="form-control">
-								<option selected>Choose...</option>
-								<option>Mexico</option>
-								<option>Guatemala</option>
-								<option>USA</option>
+								<option>Texas</option>
+								<option>Ohio</option>
 								<option>...</option>
 							</select>
 						</div>
-						<div class="form-group col-md-6">
-							<label for="inputState">Education level</label> <select
-								id="inputState" class="form-control">
-								<option selected>Choose...</option>
-								<option>Primayr</option>
-								<option>Secondary</option>
-								<option>College</option>
-								<option>None</option>
-							</select>
-						</div>
+
 					</div>
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputState">Salary Range</label> <select
-								id="inputState" class="form-control">
+							<label for="inputState">City</label> <select id="inputState"
+								class="form-control">
 								<option selected>Choose...</option>
-								<option>10000 - 15000</option>
-								<option>16000 - 25000</option>
-								<option>26000 - 40000</option>
-								<option>>41000</option>
+								<option>Dallas</option>
+								<option>Irving</option>
+								<option>...h</option>
 							</select>
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputPassword4">Number of children</label> <input
-								type="password" class="form-control" id="inputPassword4">
+							<label for="inputEmail4">Zip</label> <input type="email"
+								class="form-control" id="inputEmail4" placeholder="Zip">
 						</div>
 					</div>
 
 					<button type="submit" class="btn btn-primary"
-					onclick="window.location.href='registrationForm2'; return false;">Next</button>
-					<br>
-					<br>
+					onclick="window.location.href='childrenInformation'; return false;">Next</button>
+					<br> <br>
 				</form>
 
 			</div>

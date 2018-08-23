@@ -52,9 +52,22 @@
 						<label for="exampleInputPassword1">Password</label> <input
 							type="password" class="form-control" id="exampleInputPassword1"
 							placeholder="Password">
+						
+						<div class="row mx-auto" style="width: 300px;">
+							<div class="col-md-6">
+								<a href="#" class="text-white">Forgot Password</a>
+							</div>
+							
+							<div class="col-md-6">
+								<a href="/psa/registrationForm" class="text-white">Create Account</a>
+							</div>
+						</div>
+							
 					</div>
-					<button type="button" class="btn btn-primary"
-						onclick="window.location.href='registrationForm'; return false;">Submit</button>
+					
+
+					
+					<button type="button" class="btn btn-primary">Login</button>
 						
 						<br><br>
 

@@ -35,74 +35,58 @@
 		<div class="row justify-content-md-center">
 			<div class="col col-lg-2"></div>
 
-			<div class="col-md-auto">
+			<div class="col-md-auto bluebg border text-white ">
+				<br>
+				<h3>Registration Form</h3>
+				<small>
+					<p class="text-white">We'll never share your information with
+						anyone else.</p>
+				</small> <br>
 
 				<form>
 
-					Children's information <br> <br>
+					<h5>Children's information</h5>
+					<br>
 
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<label for="inputEmail4">First Name</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="First Name">
-						</div>
-						<div class="form-group col-md-6">
-							<label for="inputPassword4">Last Name</label> <input
-								type="password" class="form-control" id="inputPassword4"
-								placeholder="Last Name">
-						</div>
-					</div>
+					<button type="submit" class="btn btn-primary"
+						onclick="window.location.href='childForm'; return false;">Add</button>
+					<br> <br>
 
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<label for="inputEmail4">Age</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="Age">
-						</div>
-						<div class="form-group col-md-6">
-							<label for="inputState">Gender</label> <select id="inputState"
-								class="form-control">
-								<option selected>Choose...</option>
-								<option>Female</option>
-								<option>Male</option>
-								<option>Other</option>
-							</select>
-						</div>
-					</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">First Name</th>
+								<th scope="col">Age</th>
+								<th scope="col">Edit | Delete</th>
 
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<label for="inputState">Scholar's year</label> <select
-								id="inputState" class="form-control">
-								<option selected>Choose...</option>
-								<option>Pre-K</option>
-								<option>K</option>
-								<option>1</option>
-								<option>...</option>
-							</select>
-						</div>
-						<div class="form-group col-md-6">
-							<label for="inputState">School name</label> <select
-								id="inputState" class="form-control">
-								<option selected>Choose...</option>
-								<option>Dallas school</option>
-								<option>Fort school</option>
-								<option>Harmony</option>
-								<option>...</option>
-							</select>
-						</div>
-					</div>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>Edit | Delete</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>Edit | Delete</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Larry</td>
+								<td>the Bird</td>
+								<td>Edit | Delete</td>
+							</tr>
+						</tbody>
+					</table>
 
-					<div class="form-row">
-						<div class="form-group col-md-12">
-							<label for="inputEmail4">City of the school</label> <input
-								type="email" class="form-control" id="inputEmail4"
-								placeholder="City of the school">
-						</div>
-					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+					<br><br>
 
-
-
-					<button type="submit" class="btn btn-primary">Add</button>
 				</form>
 
 			</div>
