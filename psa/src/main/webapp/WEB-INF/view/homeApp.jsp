@@ -67,9 +67,10 @@
 
 						<div class="col">
 							<h1>
-								<i class="far fa-clipboard"></i>
+							<a href="/psa/parentsList" class="text-white"><i class="far fa-clipboard"></i></a>
+								
 							</h1>
-							<p>Parent's List</p>
+							<a href="/psa/parentsList" class="text-white">Parent's List</a>
 						</div>
 						<div class="col"></div>
 					</div>

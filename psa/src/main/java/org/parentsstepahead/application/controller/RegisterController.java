@@ -1,4 +1,4 @@
-package org.parentsstepahead.application.registercontroller;
+package org.parentsstepahead.application.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -63,5 +63,5 @@ public class RegisterController {
         return "homeApp";
 
     }
-
+    
 }
