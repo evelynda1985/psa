@@ -84,6 +84,9 @@
 							</tr>	
 						</thead>
 						
+				<!-- loop over and print our customers -->
+				<c:forEach var="tempParent" items="${ParentsList}"> 
+						
 						<tbody>
 							<tr>
 								<th scope="row">1</th>
@@ -105,7 +108,7 @@
 							</tr>
 						</tbody>
 						
-						
+					</c:forEach>
 					</table>
 
 					<button type="submit" class="btn btn-primary"

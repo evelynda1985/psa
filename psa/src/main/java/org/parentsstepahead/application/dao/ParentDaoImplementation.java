@@ -16,15 +16,15 @@ public class ParentDaoImplementation implements ParentDao {
 	@Autowired 
 	private SessionFactory sessionFactory;
 
-	@Override
+	/*@Override
 	public List<Parent> getParents() {
 		// TODO Auto-generated method stub
 		return null;
-	}
+	}*/
 	
 
 
-	/*@Override
+	@Override
 	public List<Parent> getParents() {
 		
 		//get current hibernate session
@@ -37,6 +37,6 @@ public class ParentDaoImplementation implements ParentDao {
 		List<Parent> parentsList = theQuery.getResultList();
 		
 		return parentsList;
-	}*/
+	}
 
 }

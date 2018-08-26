@@ -13,6 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -62,11 +63,13 @@ public class RegisterAppConfig implements WebMvcConfigurer {
     @Bean
     public DataSource securityDataSource(){
 
+    	/* ComboPooledDatasource */
         //Create connection pool
         ComboPooledDataSource securityDataSourse = new ComboPooledDataSource();
 
         //set the jdbc driver
         try {
+        	System.out.println("Driver Class : " + env.getProperty("jdbc.driver"));
             securityDataSourse.setDriverClass(env.getProperty("jdbc.driver"));
         } catch (PropertyVetoException e) {
             throw new RuntimeException(e);
@@ -74,11 +77,11 @@ public class RegisterAppConfig implements WebMvcConfigurer {
 
         //log the connection properties
         //We want to make sure we are reading data from the properties file
-        logger.info(">>> jdbc.url=" + env.getProperty("jdbc.driver"));
+        logger.info(">>> jdbc.url=" + env.getProperty("jdbc.url"));
         logger.info(">>> jdbc.user=" + env.getProperty("jdbc.user"));
 
         //set database connection properties
-        securityDataSourse.setJdbcUrl(env.getProperty("jdbc.driver"));
+        securityDataSourse.setJdbcUrl(env.getProperty("jdbc.url"));
         securityDataSourse.setUser(env.getProperty("jdbc.user"));
         securityDataSourse.setPassword(env.getProperty("jdbc.password"));
 
@@ -89,6 +92,7 @@ public class RegisterAppConfig implements WebMvcConfigurer {
         securityDataSourse.setInitialPoolSize(getIntProperty("connection.pool.initialPoolSize"));
 
         return securityDataSourse;
+    
     }
     
 	private Properties getHibernateProperties() {

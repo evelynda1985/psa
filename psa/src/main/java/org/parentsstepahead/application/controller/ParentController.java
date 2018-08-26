@@ -16,14 +16,14 @@ public class ParentController {
 	@Autowired 
 	ParentService parentService;
 	
-	@GetMapping("/parentsList")
+	/*@GetMapping("/parentsList")
     public String getParentsList(){
 
         return "parentsList";
 
-    }
+    }*/
 
-	/*@GetMapping("/parentsList")
+	@GetMapping("/parentsList")
 	public String getParentsList(Model theModel) {
 		
 		//get from the DAO
@@ -33,6 +33,6 @@ public class ParentController {
 		theModel.addAttribute("ParentsList", theParent);
 		
 		return "parentsList";
-	}*/
+	}
 
 }
