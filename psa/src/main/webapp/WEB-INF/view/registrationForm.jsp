@@ -120,7 +120,7 @@
 					</div>
 
 					<button type="submit" class="btn btn-primary"
-					onclick="window.location.href='registrationForm2'; return false;">Next</button>
+					onclick="window.location.href='parentsList'; return false;">Save</button>
 					<br>
 					<br>
 				</form>

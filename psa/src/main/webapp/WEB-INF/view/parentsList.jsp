@@ -1,6 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" isELIgnored="false"%>
 
 <!doctype html>
 <html lang="en">
@@ -72,47 +73,31 @@
 							<tr>
 								<th scope="col">#</th>
 								<th scope="col">First Name</th>
+								<th scope="col">First Name</th>
 								<th scope="col">Country of Origin</th>
-								<th scope="col">Salary Range</th>
-								<th scope="col"># of Children</th>
-								<th scope="col">Phone Number</th>
-								<th scope="col">email</th>
-								<th scope="col">Street</th>
-								<th scope="col">State</th>
-								<th scope="col">Zip Code</th>
-								<th scope="col">Read | Edit | Delete</th>
+								<th scope="col">See | Edit | Delete</th>
 							</tr>	
 						</thead>
 						
-				<!-- loop over and print our customers -->
-				<c:forEach var="tempParent" items="${ParentsList}"> 
-						
 						<tbody>
+						
+						<!-- loop over and print our customers -->
+						<c:forEach var="tempParent" items="${ParentsList}"> 						
 							<tr>
-								<th scope="row">1</th>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>Edit | Delete</td>
+								<td> ${tempParent.idParent} </td>
+								<td> ${tempParent.firstName} </td>
+								<td> ${tempParent.lastName} </td>
+								<td> ${tempParent.countryOfOrigin} </td>
+								<td>See | Edit | Delete</td>
 							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>Edit | Delete</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Larry</td>
-								<td>the Bird</td>
-								<td>Edit | Delete</td>
-							</tr>
+						</c:forEach>
+						
 						</tbody>
 						
-					</c:forEach>
 					</table>
 
 					<button type="submit" class="btn btn-primary"
-						onclick="window.location.href='homeApp'; return false;">Submit</button>
+						onclick="window.location.href='homeApp'; return false;">Home</button>
 					<br> <br>
 
 				</form>

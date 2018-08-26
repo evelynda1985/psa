@@ -18,7 +18,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="parent")
-public class Parent implements Serializable{
+public class Parent{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -31,7 +31,10 @@ public class Parent implements Serializable{
 	@Column(name="lastName")
 	private String lastName;
 	
-	@Column(name="gender")
+	@Column(name="countryOfOrigin")
+	private String countryOfOrigin;
+	
+	/*@Column(name="gender")
 	private String gender;
 	
 	@Column(name="civilStatus")
@@ -79,13 +82,15 @@ public class Parent implements Serializable{
 		this.numberOfChildren = numberOfChildren;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
-	}
+	}*/
+	
 	
 	//Temporal constructor
-	public Parent(String firstName, String countryOfOrigin, int salaryRange) {
+	public Parent() {}
+	public Parent(String firstName, String lastName, String countryOfOrigin) {
 		this.firstName = firstName;
+		this.lastName = lastName;
 		this.countryOfOrigin = countryOfOrigin;
-		this.salaryRange = salaryRange;
 	}
 	
 	
@@ -113,7 +118,16 @@ public class Parent implements Serializable{
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	public String getCountryOfOrigin() {
+		return countryOfOrigin;
+	}
 
+	public void setCountryOfOrigin(String countryOfOrigin) {
+		this.countryOfOrigin = countryOfOrigin;
+	}
+
+/*
 	public String getGender() {
 		return gender;
 	}
@@ -210,7 +224,7 @@ public class Parent implements Serializable{
 		}
 		
 		childrenList.add(theChild);		
-	}
+	}*/
 	
 
 }

@@ -29,7 +29,6 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @EnableWebMvc
 @EnableTransactionManagement
 @ComponentScan(basePackages = "org.parentsstepahead.application")
-//@PropertySource("classpath:application.properties")
 @PropertySource({ "classpath:application.properties" })
 public class RegisterAppConfig implements WebMvcConfigurer {
 	
