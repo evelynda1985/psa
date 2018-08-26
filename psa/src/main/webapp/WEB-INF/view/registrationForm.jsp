@@ -43,16 +43,19 @@
 						anyone else.</p>
 				</small> <br>
 
-				<form>
+				<form:form action="saveParent" modelAttribute="parent" method="POST">	
+				
+				<form:hidden path="idParent" />
+				
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputEmail4">First Name</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="First Name">
-						</div>
+							<label for="parentFirstName">First Name</label> 
+							<form:input  path="firstName" type="text" class="form-control" id="parentFirstName" placeholder="First Name"/>
+						</div>						
+						
 						<div class="form-group col-md-6">
-							<label for="inputPassword4">Last Name</label> <input
-								type="password" class="form-control" id="inputPassword4"
-								placeholder="Last Name">
+							<label for="parentLastName">Last Name</label> 
+							<form:input path="lastName" type="text" class="form-control" id="parentLastName" placeholder="Last Name"/>
 						</div>
 					</div>
 
@@ -81,20 +84,20 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputState">Country of origin</label> <select
-								id="inputState" class="form-control">
+							<label for="countryOfOrigin">Country of origin</label> 
+							<form:select path="countryOfOrigin" id="countryOfOrigin" class="form-control">
 								<option selected>Choose...</option>
 								<option>Mexico</option>
 								<option>Guatemala</option>
 								<option>USA</option>
 								<option>...</option>
-							</select>
+							</form:select>
 						</div>
 						<div class="form-group col-md-6">
 							<label for="inputState">Education level</label> <select
 								id="inputState" class="form-control">
 								<option selected>Choose...</option>
-								<option>Primayr</option>
+								<option>Primary</option>
 								<option>Secondary</option>
 								<option>College</option>
 								<option>None</option>
@@ -114,16 +117,17 @@
 							</select>
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputPassword4">Number of children</label> <input
-								type="password" class="form-control" id="inputPassword4">
+							<label for="inputEmail4">Number of children</label> <input type="email"
+								class="form-control" id="inputEmail4" placeholder="Number of children">
 						</div>
 					</div>
+					
+					<input type="submit" value="Save" class="btn btn-primary" />
 
-					<button type="submit" class="btn btn-primary"
-					onclick="window.location.href='parentsList'; return false;">Save</button>
+
 					<br>
 					<br>
-				</form>
+				</form:form>
 
 			</div>
 

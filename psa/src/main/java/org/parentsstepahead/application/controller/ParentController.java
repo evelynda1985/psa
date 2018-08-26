@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -16,13 +18,7 @@ public class ParentController {
 	@Autowired 
 	ParentService parentService;
 	
-	/*@GetMapping("/parentsList")
-    public String getParentsList(){
-
-        return "parentsList";
-
-    }*/
-
+	//Extract parents from the database
 	@GetMapping("/parentsList")
 	public String getParentsList(Model theModel) {
 		
@@ -34,5 +30,24 @@ public class ParentController {
 		
 		return "parentsList";
 	}
+	
+    @GetMapping("/registrationForm")
+    public String showRegistrationForm(Model theModel){
+    	
+    	Parent theParent = new Parent();
+    	theModel.addAttribute("parent", theParent);    	
+
+        return "registrationForm";
+
+    }
+    
+	@PostMapping("/saveParent")
+	public String saveParent(@ModelAttribute("parent") Parent theParent) {
+		
+		parentService.saveParent(theParent);	
+		
+		return "redirect:/parentsList";
+	}
+    
 
 }

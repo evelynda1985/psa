@@ -15,13 +15,6 @@ public class RegisterController {
 
     }
     
-    @GetMapping("/registrationForm")
-    public String showRegistrationForm(){
-
-        return "registrationForm";
-
-    }
-    
     @GetMapping("/registrationForm2")
     public String showRegistrationForm2(){
 

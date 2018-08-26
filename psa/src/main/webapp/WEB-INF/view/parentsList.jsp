@@ -66,6 +66,7 @@
 
 					<button type="submit" class="btn btn-primary"
 						onclick="window.location.href='registrationForm'; return false;">Add</button>
+						
 					<br> <br>
 
 					<table class="table">
@@ -73,7 +74,7 @@
 							<tr>
 								<th scope="col">#</th>
 								<th scope="col">First Name</th>
-								<th scope="col">First Name</th>
+								<th scope="col">Last Name</th>
 								<th scope="col">Country of Origin</th>
 								<th scope="col">See | Edit | Delete</th>
 							</tr>	

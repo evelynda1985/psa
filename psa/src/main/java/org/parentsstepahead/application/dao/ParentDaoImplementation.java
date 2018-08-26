@@ -16,13 +16,6 @@ public class ParentDaoImplementation implements ParentDao {
 	@Autowired 
 	private SessionFactory sessionFactory;
 
-	/*@Override
-	public List<Parent> getParents() {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
-	
-
 
 	@Override
 	public List<Parent> getParents() {
@@ -37,6 +30,14 @@ public class ParentDaoImplementation implements ParentDao {
 		List<Parent> parentsList = theQuery.getResultList();
 		
 		return parentsList;
+	}
+
+	@Override
+	public void saveParent(Parent theParent) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		currentSession.saveOrUpdate(theParent);
+		
 	}
 
 }

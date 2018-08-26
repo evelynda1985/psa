@@ -8,4 +8,6 @@ public interface ParentDao {
 
 	public List<Parent> getParents();
 
+	public void saveParent(Parent theParent);
+
 }

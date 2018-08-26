@@ -13,20 +13,19 @@ public class ParentServiceImplementation implements ParentService {
 	
 	@Autowired
 	private ParentDao parentDao;
-	
-	/*@Override
-	@Transactional
-	public List<Parent> getParents() {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
-	
 
 
 	@Override
 	@Transactional //avoid to write session.begin and session.getCurrentSession.commit
 	public List<Parent> getParents() {
 		return parentDao.getParents();
+	}
+
+	@Override
+	@Transactional
+	public void saveParent(Parent theParent) {
+		parentDao.saveParent(theParent);
+		
 	}
 
 }
