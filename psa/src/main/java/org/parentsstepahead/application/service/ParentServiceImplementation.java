@@ -43,4 +43,11 @@ public class ParentServiceImplementation implements ParentService {
 		
 	}
 
+	@Override
+	@Transactional
+	public List<Parent> searchParents(String theSearchName) {
+		
+		return parentDao.searchParents(theSearchName);
+	}
+
 }

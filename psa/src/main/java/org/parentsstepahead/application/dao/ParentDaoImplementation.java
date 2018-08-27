@@ -20,13 +20,10 @@ public class ParentDaoImplementation implements ParentDao {
 	@Override
 	public List<Parent> getParents() {
 		
-		//get current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		//create a query sort it by last name
 		Query<Parent> theQuery = currentSession.createQuery("from Parent order by lastName", Parent.class);
 		
-		//get the list result - of customers
 		List<Parent> parentsList = theQuery.getResultList();
 		
 		return parentsList;
@@ -56,6 +53,28 @@ public class ParentDaoImplementation implements ParentDao {
 		Parent theParent = currentSession.get(Parent.class, theId);
 		currentSession.delete(theParent);
 		
+	}
+
+	@Override
+	public List<Parent> searchParents(String theSearchName) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		Query theQuery = null;
+		
+		if (theSearchName != null && theSearchName.trim().length() > 0) {
+
+            theQuery = currentSession.createQuery("from Parent where lower(firstName) like :theName or lower(lastName) like :theName", Parent.class);
+            theQuery.setParameter("theName", "%" + theSearchName.toLowerCase() + "%");
+
+        }
+        else {
+        	
+            theQuery = currentSession.createQuery("from Parent", Parent.class);            
+        }
+        
+        List<Parent> parentsList = theQuery.getResultList();
+                      		 
+		return parentsList;
 	}
 
 }

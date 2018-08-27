@@ -19,14 +19,11 @@ public class ParentController {
 	@Autowired 
 	ParentService parentService;
 	
-	//Extract parents from the database
 	@GetMapping("/parentsList")
 	public String getParentsList(Model theModel) {
 		
-		//get from the DAO
 		List<Parent> theParent = parentService.getParents();
 		
-		//add customer to the service
 		theModel.addAttribute("ParentsList", theParent);
 		
 		return "parentsList";
@@ -66,6 +63,16 @@ public class ParentController {
 		parentService.deleteParent(theId);
 		
 		return "redirect:/parentsList";
+	}
+	
+	@PostMapping("/search")
+    public String searchParents(@RequestParam("theSearchName") String theSearchName, Model theModel) {
+
+        List<Parent> parentsList = parentService.searchParents(theSearchName);
+
+        theModel.addAttribute("ParentsList", parentsList);
+
+        return "parentsList";
 	}
     
 

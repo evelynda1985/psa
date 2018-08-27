@@ -14,4 +14,6 @@ public interface ParentDao {
 
 	public void deleteParent(int theId);
 
+	public List<Parent> searchParents(String theSearchName);
+
 }

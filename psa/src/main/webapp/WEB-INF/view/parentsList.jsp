@@ -44,26 +44,18 @@
 						else.</p>
 				</small>
 
-				<form>
+			
 
 					<div class="form-group col-md-12">
-						<label for="inputEmail4">Search</label> <input type="email"
-							class="form-control" id="inputEmail4" placeholder="Search">
+						
+						<!--  add a search box -->
+			            <form:form action="search" method="POST">
+			           		 <input type="text" name="theSearchName" class="form-control"/>
+			                <br>
+			                <center><input type="submit" value="Search" class="btn btn-primary" /></center>
+			            </form:form>						
+					
 					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-sm"></div>
-							
-							<div class="col-sm">					
-								<button type="submit" class="btn btn-primary"
-									onclick="window.location.href='childForm'; return false;">Search
-								</button></div>
-								
-							<div class="col-sm"></div>
-						</div>
-					</div>
-					<br>
-
 					<button type="submit" class="btn btn-primary"
 						onclick="window.location.href='registrationForm'; return false;">Add</button>
 						
