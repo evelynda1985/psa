@@ -28,4 +28,11 @@ public class ParentServiceImplementation implements ParentService {
 		
 	}
 
+	@Override
+	@Transactional
+	public Parent getParent(int theId) {
+		
+		return parentDao.getParent(theId);
+	}
+
 }

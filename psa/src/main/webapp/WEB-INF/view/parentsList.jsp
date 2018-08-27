@@ -76,20 +76,40 @@
 								<th scope="col">First Name</th>
 								<th scope="col">Last Name</th>
 								<th scope="col">Country of Origin</th>
-								<th scope="col">See | Edit | Delete</th>
+								<th scope="col"> Edit | Delete</th>
 							</tr>	
 						</thead>
 						
 						<tbody>
 						
 						<!-- loop over and print our customers -->
-						<c:forEach var="tempParent" items="${ParentsList}"> 						
+						<c:forEach var="tempParent" items="${ParentsList}"> 	
+						
+						<!-- construct an "update" link with customer id -->
+						<c:url var="updateParent" value="/showFormForUpdate">
+							<c:param name="idParent" value="${tempParent.idParent}" />
+						</c:url>					
+	
+						<!-- construct an "delete" link with customer id -->
+						<c:url var="deleteParent" value="/delete">
+							<c:param name="idParent" value="${tempParent.idParent}" />
+						</c:url>
+						
+										
 							<tr>
 								<td> ${tempParent.idParent} </td>
 								<td> ${tempParent.firstName} </td>
 								<td> ${tempParent.lastName} </td>
 								<td> ${tempParent.countryOfOrigin} </td>
-								<td>See | Edit | Delete</td>
+								
+							<td>
+							<!-- display the update link -->
+							<a href="${updateParent}" class="text-white" >Update</a>
+							|
+							<a href="${deleteParent}" class="text-white"
+							   onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a>
+							</td>
+							
 							</tr>
 						</c:forEach>
 						

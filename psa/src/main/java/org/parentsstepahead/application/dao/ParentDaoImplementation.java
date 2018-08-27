@@ -40,4 +40,13 @@ public class ParentDaoImplementation implements ParentDao {
 		
 	}
 
+	@Override
+	public Parent getParent(int theId) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		Parent theParent = currentSession.get(Parent.class, theId);
+		
+		return theParent;
+	}
+
 }

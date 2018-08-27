@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ParentController {
@@ -47,6 +48,16 @@ public class ParentController {
 		parentService.saveParent(theParent);	
 		
 		return "redirect:/parentsList";
+	}
+	
+	@GetMapping("/showFormForUpdate")
+	public String showFormForUpdate(@RequestParam("idParent") int theId, Model theModel) {
+		
+		Parent theParent = parentService.getParent(theId);	
+		
+		theModel.addAttribute("parent", theParent);
+				
+		return "registrationForm";
 	}
     
 

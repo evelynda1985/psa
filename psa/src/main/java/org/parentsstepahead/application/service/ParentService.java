@@ -10,4 +10,6 @@ public interface ParentService {
 
 	public void saveParent(Parent theParent);
 
+	public Parent getParent(int theId);
+
 }
