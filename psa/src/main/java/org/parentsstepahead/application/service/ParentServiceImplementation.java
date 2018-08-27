@@ -16,7 +16,7 @@ public class ParentServiceImplementation implements ParentService {
 
 
 	@Override
-	@Transactional //avoid to write session.begin and session.getCurrentSession.commit
+	@Transactional 
 	public List<Parent> getParents() {
 		return parentDao.getParents();
 	}

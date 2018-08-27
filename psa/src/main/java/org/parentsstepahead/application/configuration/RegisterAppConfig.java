@@ -40,14 +40,12 @@ public class RegisterAppConfig implements WebMvcConfigurer {
           .addResourceLocations("/resources/");
     }
 
-    //Set up variable to hold the properties
     @Autowired
     private Environment env;
 
-    //Set up a logger for diagnostic
+
     private Logger logger = Logger.getLogger(getClass().getName());
 
-    //Define a bean for viewResolver
     @Bean
     public ViewResolver viewResolver(){
 
@@ -58,15 +56,12 @@ public class RegisterAppConfig implements WebMvcConfigurer {
         return viewResolver;
     }
 
-    //Connecting with the db
     @Bean
     public DataSource securityDataSource(){
 
-    	/* ComboPooledDatasource */
-        //Create connection pool
         ComboPooledDataSource securityDataSourse = new ComboPooledDataSource();
-
-        //set the jdbc driver
+        
+        //Exception Handling
         try {
         	System.out.println("Driver Class : " + env.getProperty("jdbc.driver"));
             securityDataSourse.setDriverClass(env.getProperty("jdbc.driver"));
@@ -74,17 +69,13 @@ public class RegisterAppConfig implements WebMvcConfigurer {
             throw new RuntimeException(e);
         }
 
-        //log the connection properties
-        //We want to make sure we are reading data from the properties file
         logger.info(">>> jdbc.url=" + env.getProperty("jdbc.url"));
         logger.info(">>> jdbc.user=" + env.getProperty("jdbc.user"));
 
-        //set database connection properties
         securityDataSourse.setJdbcUrl(env.getProperty("jdbc.url"));
         securityDataSourse.setUser(env.getProperty("jdbc.user"));
         securityDataSourse.setPassword(env.getProperty("jdbc.password"));
 
-        //set connection pool properties
         securityDataSourse.setInitialPoolSize(getIntProperty("connection.pool.initialPoolSize"));
         securityDataSourse.setMinPoolSize(getIntProperty("connection.pool.minPoolSize"));
         securityDataSourse.setMaxPoolSize(getIntProperty("connection.pool.maxPoolSize"));
@@ -96,7 +87,6 @@ public class RegisterAppConfig implements WebMvcConfigurer {
     
 	private Properties getHibernateProperties() {
 
-		// set hibernate properties
 		Properties props = new Properties();
 
 		props.setProperty("hibernate.dialect", env.getProperty("hibernate.dialect"));
@@ -105,12 +95,10 @@ public class RegisterAppConfig implements WebMvcConfigurer {
 		return props;				
 	}
 
-    //read enviroment property and convert to int
     private int getIntProperty(String propName){
 
         String propVal = env.getProperty(propName);
 
-        //now convert it to int
         int intPropVal = Integer.parseInt(propVal);
 
         return intPropVal;
@@ -119,10 +107,8 @@ public class RegisterAppConfig implements WebMvcConfigurer {
 	@Bean
 	public LocalSessionFactoryBean sessionFactory(){
 		
-		// create session factorys
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		
-		// set the properties
 		sessionFactory.setDataSource(securityDataSource());
 		sessionFactory.setPackagesToScan(env.getProperty("hibernate.packagesToScan"));
 		sessionFactory.setHibernateProperties(getHibernateProperties());
@@ -134,7 +120,6 @@ public class RegisterAppConfig implements WebMvcConfigurer {
 	@Autowired
 	public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
 		
-		// setup transaction manager based on session factory
 		HibernateTransactionManager txManager = new HibernateTransactionManager();
 		txManager.setSessionFactory(sessionFactory);
 
