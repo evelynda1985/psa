@@ -59,6 +59,14 @@ public class ParentController {
 				
 		return "registrationForm";
 	}
+	
+	@GetMapping("/delete")
+	public String deleteParent(@RequestParam("idParent") int theId) {
+		
+		parentService.deleteParent(theId);
+		
+		return "redirect:/parentsList";
+	}
     
 
 }

@@ -12,4 +12,6 @@ public interface ParentDao {
 
 	public Parent getParent(int theId);
 
+	public void deleteParent(int theId);
+
 }

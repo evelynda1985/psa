@@ -35,4 +35,12 @@ public class ParentServiceImplementation implements ParentService {
 		return parentDao.getParent(theId);
 	}
 
+	@Override
+	@Transactional
+	public void deleteParent(int theId) {
+		
+		parentDao.deleteParent(theId);
+		
+	}
+
 }

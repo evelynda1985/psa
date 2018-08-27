@@ -49,4 +49,13 @@ public class ParentDaoImplementation implements ParentDao {
 		return theParent;
 	}
 
+	@Override
+	public void deleteParent(int theId) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		Parent theParent = currentSession.get(Parent.class, theId);
+		currentSession.delete(theParent);
+		
+	}
+
 }

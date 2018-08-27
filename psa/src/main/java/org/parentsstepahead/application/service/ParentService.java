@@ -12,4 +12,6 @@ public interface ParentService {
 
 	public Parent getParent(int theId);
 
+	public void deleteParent(int theId);
+
 }
