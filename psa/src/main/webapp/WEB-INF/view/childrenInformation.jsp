@@ -45,7 +45,7 @@
 
 				<form>
 
-					<h5>Children's information</h5>
+					<h5>Children's information (only pre-k to 12)</h5>
 					<br>
 
 					<button type="submit" class="btn btn-primary"
@@ -84,9 +84,19 @@
 						</tbody>
 					</table>
 
-					<button type="submit" class="btn btn-primary"
-					onclick="window.location.href='homeApp'; return false;">Submit</button>
-					<br><br>
+					<div class="row">
+						<div class="col">
+							<button type="button" class="btn btn-primary"
+								onclick="window.location.href='registrationForm2'; return false;">Back</button>
+						</div>
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col">
+							<button type="submit" class="btn btn-primary"
+								onclick="window.location.href='homeApp'; return false;">Submit</button>
+							<br> <br>
+						</div>
+					</div>
 
 				</form>
 

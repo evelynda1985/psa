@@ -46,6 +46,27 @@
 				<form>
 					<div class="form-row">
 						<div class="form-group col-md-6">
+							<label for="inputEmail4">Event school name</label> <select
+								id="inputState" class="form-control">
+								<option selected>Choose...</option>
+								<option>School1</option>
+								<option>School2</option>
+								<option>...</option>
+							</select>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="inputPassword4">Event school city</label> <select
+								id="inputState" class="form-control">
+								<option selected>Choose...</option>
+								<option>City1</option>
+								<option>City2</option>
+								<option>...</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
 							<label for="inputEmail4">Phone Number</label> <input type="email"
 								class="form-control" id="inputEmail4" placeholder="Phone Number">
 						</div>
@@ -62,11 +83,11 @@
 						</div>
 
 						<div class="form-group col-md-6">
-							<label for="inputState">State</label> <select id="inputState"
+							<label for="inputState">City</label> <select id="inputState"
 								class="form-control">
 								<option selected>Choose...</option>
-								<option>Texas</option>
-								<option>Ohio</option>
+								<option>Dallas</option>
+								<option>Irving</option>
 								<option>...</option>
 							</select>
 						</div>
@@ -75,12 +96,12 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputState">City</label> <select id="inputState"
+							<label for="inputState">State</label> <select id="inputState"
 								class="form-control">
 								<option selected>Choose...</option>
-								<option>Dallas</option>
-								<option>Irving</option>
-								<option>...h</option>
+								<option>Texas</option>
+								<option>Ohio</option>
+								<option>...</option>
 							</select>
 						</div>
 						<div class="form-group col-md-6">
@@ -89,9 +110,20 @@
 						</div>
 					</div>
 
-					<button type="submit" class="btn btn-primary"
-					onclick="window.location.href='childrenInformation'; return false;">Next</button>
-					<br> <br>
+					<div class="row">
+						<div class="col">
+							<button type="button" class="btn btn-primary"
+								onclick="window.location.href='registrationForm'; return false;">Back</button>
+						</div>
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col">
+							<button type="submit" class="btn btn-primary"
+								onclick="window.location.href='childrenInformation'; return false;">Next</button>
+							<br> <br>
+						</div>
+					</div>
+
 				</form>
 
 			</div>

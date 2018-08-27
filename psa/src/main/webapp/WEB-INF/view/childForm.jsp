@@ -72,20 +72,7 @@
 								class="form-control" id="inputEmail4" placeholder="Age">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputState">School's name</label> <select
-								id="inputState" class="form-control">
-								<option selected>Choose...</option>
-								<option>Dallas school</option>
-								<option>Fort school</option>
-								<option>Harmony</option>
-								<option>...</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<label for="inputState">Scholar's year</label> <select
+							<label for="inputState">School's grade</label> <select
 								id="inputState" class="form-control">
 								<option selected>Choose...</option>
 								<option>Pre-K</option>
@@ -93,6 +80,14 @@
 								<option>1</option>
 								<option>...</option>
 							</select>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="inputState">School's name</label> <input type="email"
+								class="form-control" id="inputEmail4"
+								placeholder="School's name">
 						</div>
 						<div class="form-group col-md-6">
 							<label for="inputState">School's city</label> <select
@@ -106,9 +101,20 @@
 						</div>
 					</div>
 
-					<button type="submit" class="btn btn-primary"
-					onclick="window.location.href='childrenInformation'; return false;">Save</button>
-					<br> <br>
+					<div class="row">
+						<div class="col">
+							<button type="button" class="btn btn-primary"
+								onclick="window.location.href='childrenInformation'; return false;">Back</button>
+						</div>
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col">
+							<button type="submit" class="btn btn-primary"
+								onclick="window.location.href='childrenInformation'; return false;">Save</button>
+							<br> <br>
+						</div>
+					</div>
+
 				</form>
 
 			</div>

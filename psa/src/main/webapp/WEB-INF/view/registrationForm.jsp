@@ -36,26 +36,28 @@
 			<div class="col col-lg-2"></div>
 
 			<div class="col-md-auto bluebg border text-white ">
-			<br>
+				<br>
 				<h3>Registration Form</h3>
 				<small>
 					<p class="text-white">We'll never share your information with
 						anyone else.</p>
 				</small> <br>
 
-				<form:form action="saveParent" modelAttribute="parent" method="POST">	
-				
-				<form:hidden path="idParent" />
-				
+				<form:form action="saveParent" modelAttribute="parent" method="POST">
+
+					<form:hidden path="idParent" />
+
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="parentFirstName">First Name</label> 
-							<form:input  path="firstName" type="text" class="form-control" id="parentFirstName" placeholder="First Name"/>
-						</div>						
-						
+							<label for="parentFirstName">First Name</label>
+							<form:input path="firstName" type="text" class="form-control"
+								id="parentFirstName" placeholder="First Name" />
+						</div>
+
 						<div class="form-group col-md-6">
-							<label for="parentLastName">Last Name</label> 
-							<form:input path="lastName" type="text" class="form-control" id="parentLastName" placeholder="Last Name"/>
+							<label for="parentLastName">Last Name</label>
+							<form:input path="lastName" type="text" class="form-control"
+								id="parentLastName" placeholder="Last Name" />
 						</div>
 					</div>
 
@@ -84,8 +86,9 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="countryOfOrigin">Country of origin</label> 
-							<form:select path="countryOfOrigin" id="countryOfOrigin" class="form-control">
+							<label for="countryOfOrigin">Country of origin</label>
+							<form:select path="countryOfOrigin" id="countryOfOrigin"
+								class="form-control">
 								<option selected>Choose...</option>
 								<option>Mexico</option>
 								<option>Guatemala</option>
@@ -97,8 +100,9 @@
 							<label for="inputState">Education level</label> <select
 								id="inputState" class="form-control">
 								<option selected>Choose...</option>
-								<option>Primary</option>
-								<option>Secondary</option>
+								<option>Elementary</option>
+								<option>Middle</option>
+								<option>High School</option>
 								<option>College</option>
 								<option>None</option>
 							</select>
@@ -107,23 +111,36 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputState">Salary Range</label> <select
+							<label for="inputState">Annual household income</label> <select
 								id="inputState" class="form-control">
 								<option selected>Choose...</option>
-								<option>10000 - 15000</option>
-								<option>16000 - 25000</option>
-								<option>26000 - 40000</option>
-								<option>>41000</option>
+								<option>$10,000 - 15,000</option>
+								<option>$16,000 - 25,000</option>
+								<option>$26,000 - 40,000</option>
+								<option>$51,000 +</option>
 							</select>
 						</div>
-						<div class="form-group col-md-6">
-							<label for="inputEmail4">Number of children</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="Number of children">
-						</div>
+						<div class="form-group col-md-6"></div>
 					</div>
-					
+
 					<input type="submit" value="Save" class="btn btn-primary" />
 
+					<br>
+					<br>
+
+					<div></div>
+					<div class="row">
+						<div class="col">
+							<button type="button" class="btn btn-primary"
+								onclick="window.location.href='registrationForm2'; return false;">Back</button>
+						</div>
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col">
+							<button type="button" class="btn btn-primary"
+								onclick="window.location.href='registrationForm2'; return false;">Next</button>
+						</div>
+					</div>
 
 					<br>
 					<br>

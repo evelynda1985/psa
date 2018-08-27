@@ -35,7 +35,6 @@
 	<div class="container">
 
 		<div class="row justify-content-md-center">
-			<div class="col col-lg-2"></div>
 
 			<div class="col-md-auto bluebg border text-white">
 
@@ -55,32 +54,22 @@
 
 				<div class="container">
 					<div class="row mx-auto" >
-						<div class="col"></div>
-						<div class="col">
-							<div class="img">
-							<a href="/psa/login">
-								<img src="../psa/resources/img/english.png" alt="english">
-							</a>
+						<div class="col col-lg-5">
+							<div>
+								<h3 class="language"><a href="/psa/login" class="badge badge-primary"> English </a></h3>
 							</div>
 						</div>
 						<div class="col col-lg-2"></div>
-
-						<div class="col">
-							<div class="img">
-							<a href="#">
-								<img src="../psa/resources/img/spanish.png" alt="spanish">
-							</a>
-							</div>
+						<div class="col col-lg-5">
+								<h3  class="language"> <a href="#" class="badge badge-primary"> Español </a></h3>
 						</div>
-						<div class="col"></div>
+						</div>
 					</div>
+					<br>
 				</div>
-
 			</div>
-
 			<div class="col col-lg-2"></div>
 		</div>
-	</div>
 
 
 
