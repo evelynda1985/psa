@@ -39,16 +39,10 @@
 			<div class="col-md-auto bluebg border text-white ">
 				<br>
 				<h3>Parents' List</h3>
-				<small>
-					<p class="text-white">Don't share this information with anyone
-						else.</p>
-				</small>
-
-			
+				<p class="text-white"> <small> Don't share this information with anyone else.</small></p>
 
 					<div class="form-group col-md-12">
 						
-						<!--  add a search box -->
 			            <form:form action="search" method="POST">
 			           		 <input type="text" name="theSearchName" class="form-control"/>
 			                <br>
@@ -74,19 +68,15 @@
 						
 						<tbody>
 						
-						<!-- loop over and print our customers -->
 						<c:forEach var="tempParent" items="${ParentsList}"> 	
 						
-						<!-- construct an "update" link with customer id -->
 						<c:url var="updateParent" value="/showFormForUpdate">
 							<c:param name="idParent" value="${tempParent.idParent}" />
 						</c:url>					
 	
-						<!-- construct an "delete" link with customer id -->
 						<c:url var="deleteParent" value="/delete">
 							<c:param name="idParent" value="${tempParent.idParent}" />
-						</c:url>
-						
+						</c:url>		
 										
 							<tr>
 								<td> ${tempParent.idParent} </td>
@@ -95,11 +85,11 @@
 								<td> ${tempParent.countryOfOrigin} </td>
 								
 							<td>
-							<!-- display the update link -->
+
 							<a href="${updateParent}" class="text-white" >Update</a>
 							|
-							<a href="${deleteParent}" class="text-white"
-							   onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a>
+							<a href="${deleteParent}" class="text-white" 
+							   onclick="if (!(confirm('Are you sure you want to delete this parent?'))) return false">Delete</a>
 							</td>
 							
 							</tr>
@@ -112,16 +102,11 @@
 					<button type="submit" class="btn btn-primary"
 						onclick="window.location.href='homeApp'; return false;">Home</button>
 					<br> <br>
-
-				</form>
-
 			</div>
 
 			<div class="col col-lg-2"></div>
 		</div>
 	</div>
-
-
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

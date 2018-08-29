@@ -38,10 +38,8 @@
 			<div class="col-md-auto bluebg border text-white ">
 				<br>
 				<h3>Registration Form</h3>
-				<small>
-					<p class="text-white">We'll never share your information with
-						anyone else.</p>
-				</small> <br>
+				<p class="text-white"><small> We'll never share your information with anyone else.</small></p> 
+				<br>
 
 				<form:form action="saveParent" modelAttribute="parent" method="POST">
 
@@ -132,7 +130,7 @@
 					<div class="row">
 						<div class="col">
 							<button type="button" class="btn btn-primary"
-								onclick="window.location.href='registrationForm2'; return false;">Back</button>
+								onclick="window.location.href='parentsList'; return false;">Back</button>
 						</div>
 						<div class="col"></div>
 						<div class="col"></div>

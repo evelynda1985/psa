@@ -40,25 +40,21 @@
 
 				<form>
 					<div class="form-group">
-						<label for="username">Phone Number</label> <input type="email"
-							class="form-control" id="username" aria-describedby="emailHelp"
+						<label for="phoneNumber">Phone Number</label> 
+						<input type="text" maxlength="10"
+							class="form-control" id="phoneNumber" aria-describedby="phoneNumberHelp"
 							placeholder="Enter your phone number"> 
-							<small><p class="text-white">We'll send you a code to your phone number</p></small>
+							<p class="text-white"><small>We'll send you a code to your phone number</small></p>
 							
 							<button type="button" class="btn btn-primary">Send Code</button>
 
 					</div>
 					<div class="form-group">
-
-						<label for="username">Insert Code</label> 
-						<input type="email"
-							class="form-control" id="username" aria-describedby="emailHelp"
-							placeholder="Enter your phone number">
-
-
+						<label for="code">Insert Code</label> 
+						<input type="text"
+							class="form-control" id="code" aria-describedby="codeHelp"
+							placeholder="Text the code that we sent you to your phone number">
 					</div>
-
-
 
 					<button type="button" class="btn btn-primary"
 					onclick="window.location.href='resetPassword'; return false;">Reset Password</button>
@@ -75,7 +71,8 @@
 	</div>
 
 
-
+	<script src="./resources/js/validations.js"></script>
+	
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -57,19 +57,14 @@
 				<div class="container">
 					<div class="row mx-auto" >
 						<div class="col"></div>
-						<div class="col">
-							<h1>
-								<i class="far fa-address-card "></i>
-							</h1>
+						<div class="col centerInformation">
+							<h1><i class="far fa-address-card "></i></h1>
 							<p>My Profile</p>
 						</div>
 						<div class="col col-lg-2"></div>
 
-						<div class="col">
-							<h1>
-							<a href="/psa/parentsList" class="text-white"><i class="far fa-clipboard"></i></a>
-								
-							</h1>
+						<div class="col centerInformation">
+							<h1><a href="/psa/parentsList" class="text-white"><i class="far fa-clipboard"></i></a></h1>
 							<a href="/psa/parentsList" class="text-white">Parent's List</a>
 						</div>
 						<div class="col"></div>

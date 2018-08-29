@@ -21,6 +21,7 @@ public class ParentController {
 	
 	@Autowired 
 	ParentService parentService;
+	
 	private static final Logger logger = Logger.getLogger(ParentController.class);
 	
 	@GetMapping("/parentsList")

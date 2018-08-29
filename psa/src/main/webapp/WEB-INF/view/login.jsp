@@ -1,13 +1,12 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -15,8 +14,10 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 
+	
+
 <!--  -->
-<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
+<link href="<c:url value="./resources/css/style.css" />" rel="stylesheet">
 
 
 
@@ -38,19 +39,19 @@
 				<img src="../psa/resources/img/logo.png" alt="logo">
 			</div>
 
-				<form>
+				<form id="signupForm" >
 					<div class="form-group">
-						<label for="username">Phone Number</label> <input type="email"
-							class="form-control" id="username" aria-describedby="emailHelp"
+						<label for="phoneNumber">Phone Number</label> 
+						<input type="text" maxlength="10" onkeypress="isNumberKey(event)"  
+							class="form-control" id="phoneNumber" aria-describedby="phoneNumberHelp"
 							placeholder="Enter your phone number"> 
 							
-							<small> <p class="text-white">We'll never
-							share your information with anyone else.</p></small>
-							
+							<p class="text-white"> <small> We'll never share your information with anyone else.</small></p>
 					</div>
+					
 					<div class="form-group">
-						<label for="exampleInputPassword1">Password</label> <input
-							type="password" class="form-control" id="exampleInputPassword1"
+						<label for="inputPassword">Password</label> 
+						<input type="password" class="form-control" id="inputPassword"
 							placeholder="Password">
 						
 						<div class="row mx-auto" style="width: 300px;">
@@ -78,8 +79,8 @@
 			<div class="col col-lg-2"></div>
 		</div>
 	</div>
-
-
+	
+	<script src="./resources/js/loginValidation.js"></script>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
