@@ -38,10 +38,8 @@
 			<div class="col-md-auto bluebg border text-white ">
 				<br>
 				<h3>Registration Form</h3>
-				<small>
-					<p class="text-white">We'll never share your information with
-						anyone else.</p>
-				</small> <br>
+				<p class="text-white"><small> We'll never share your information with anyone else.</small></p>
+				<br>
 
 				<form>
 
@@ -50,13 +48,13 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputEmail4">First Name</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="First Name">
+							<label for="childFirstName">First Name</label> <input type="text"
+								class="form-control" id="childFirstName" placeholder="First Name">
 						</div>
 
 						<div class="form-group col-md-6">
-							<label for="inputState">Gender</label> <select id="inputState"
-								class="form-control">
+							<label for="childGender">Gender</label> 
+							<select id="childGender" class="form-control">
 								<option selected>Choose...</option>
 								<option>Female</option>
 								<option>Male</option>
@@ -68,12 +66,12 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputEmail4">Age</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="Age">
+							<label for="childAge">Age</label> 
+							<input type="text" class="form-control" id="childAge" placeholder="Age">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputState">School's grade</label> <select
-								id="inputState" class="form-control">
+							<label for="childSchoolGrade">School's grade</label> 
+							<select id="childSchoolGrade" class="form-control">
 								<option selected>Choose...</option>
 								<option>Pre-K</option>
 								<option>K</option>
@@ -85,13 +83,13 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputState">School's name</label> <input type="email"
-								class="form-control" id="inputEmail4"
+							<label for="childSchoolName">School's name</label> 
+							<input type="text" class="form-control" id="childSchoolName"
 								placeholder="School's name">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputState">School's city</label> <select
-								id="inputState" class="form-control">
+							<label for="childSchoolCity">School's city</label> 
+							<select id="childSchoolCity" class="form-control">
 								<option selected>Choose...</option>
 								<option>Dallas school</option>
 								<option>Fort school</option>

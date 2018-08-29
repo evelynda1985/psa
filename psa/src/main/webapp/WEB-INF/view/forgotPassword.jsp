@@ -41,7 +41,7 @@
 				<form>
 					<div class="form-group">
 						<label for="phoneNumber">Phone Number</label> 
-						<input type="text" maxlength="10"
+						<input type="text" maxlength="10" onkeypress="isNumberKey(event)"  
 							class="form-control" id="phoneNumber" aria-describedby="phoneNumberHelp"
 							placeholder="Enter your phone number"> 
 							<p class="text-white"><small>We'll send you a code to your phone number</small></p>
@@ -71,7 +71,7 @@
 	</div>
 
 
-	<script src="./resources/js/validations.js"></script>
+	<script src="./resources/js/loginValidation.js"></script>
 	
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

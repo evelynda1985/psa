@@ -38,16 +38,14 @@
 			<div class="col-md-auto bluebg border text-white ">
 				<br>
 				<h3>Registration Form</h3>
-				<small>
-					<p class="text-white">We'll never share your information with
-						anyone else.</p>
-				</small> <br>
+				<p class="text-white"> <small>We'll never share your information with anyone else.</small></p> 
+				<br>
 
 				<form>
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputEmail4">Event school name</label> <select
-								id="inputState" class="form-control">
+							<label for="inputSchoolEvent">Event school name</label> <select
+								id="inputSchoolEvent" class="form-control">
 								<option selected>Choose...</option>
 								<option>School1</option>
 								<option>School2</option>
@@ -55,8 +53,8 @@
 							</select>
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputPassword4">Event school city</label> <select
-								id="inputState" class="form-control">
+							<label for="inputSchoolEventCity">Event school city</label> <select
+								id="inputSchoolEventCity" class="form-control">
 								<option selected>Choose...</option>
 								<option>City1</option>
 								<option>City2</option>
@@ -67,24 +65,24 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputEmail4">Phone Number</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="Phone Number">
+							<label for="phoneNumber">Phone Number</label> <input type="text"
+								class="form-control" id="phoneNumber" placeholder="Phone Number">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputPassword4">email</label> <input type="password"
-								class="form-control" id="inputPassword4" placeholder="email">
+							<label for="email">Email</label> <input type="text"
+								class="form-control" id="email" placeholder="email">
 						</div>
 					</div>
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputEmail4">Address</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="Address">
+							<label for="address">Address</label> <input type="text"
+								class="form-control" id="address" placeholder="Address">
 						</div>
 
 						<div class="form-group col-md-6">
-							<label for="inputState">City</label> <select id="inputState"
-								class="form-control">
+							<label for="inputAddressCity">City</label> 
+							<select id="inputAddressCity" class="form-control">
 								<option selected>Choose...</option>
 								<option>Dallas</option>
 								<option>Irving</option>
@@ -96,8 +94,8 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputState">State</label> <select id="inputState"
-								class="form-control">
+							<label for="inputAddressState">State</label> 
+							<select id="inputAddressState"class="form-control">
 								<option selected>Choose...</option>
 								<option>Texas</option>
 								<option>Ohio</option>
@@ -105,8 +103,8 @@
 							</select>
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputEmail4">Zip</label> <input type="email"
-								class="form-control" id="inputEmail4" placeholder="Zip">
+							<label for="inputAddressZip">Zip Code</label> <input type="text"
+								class="form-control" id="inputAddressZip" placeholder="Zip Code">
 						</div>
 					</div>
 

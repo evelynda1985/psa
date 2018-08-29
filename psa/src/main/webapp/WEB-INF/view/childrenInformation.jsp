@@ -38,10 +38,8 @@
 			<div class="col-md-auto bluebg border text-white ">
 				<br>
 				<h3>Registration Form</h3>
-				<small>
-					<p class="text-white">We'll never share your information with
-						anyone else.</p>
-				</small> <br>
+				<p class="text-white"> <small> We'll never share your information with anyone else.</small></p> 
+				<br>
 
 				<form>
 

@@ -61,7 +61,7 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputState">Gender</label> <select id="inputState"
+							<label for="inputGender">Gender</label> <select id="inputGender"
 								class="form-control">
 								<option selected>Choose...</option>
 								<option>Female</option>
@@ -70,8 +70,8 @@
 							</select>
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputState">Civil status</label> <select
-								id="inputState" class="form-control">
+							<label for="inputCivilStatus">Civil status</label> <select
+								id="inputCivilStatus" class="form-control">
 								<option selected>Choose...</option>
 								<option>Single</option>
 								<option>Married</option>
@@ -95,8 +95,8 @@
 							</form:select>
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputState">Education level</label> <select
-								id="inputState" class="form-control">
+							<label for="inputEducationLevel">Education level</label> <select
+								id="inputEducationLevel" class="form-control">
 								<option selected>Choose...</option>
 								<option>Elementary</option>
 								<option>Middle</option>
@@ -109,8 +109,8 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputState">Annual household income</label> <select
-								id="inputState" class="form-control">
+							<label for="inputIncome">Annual household income</label> <select
+								id="inputIncome" class="form-control">
 								<option selected>Choose...</option>
 								<option>$10,000 - 15,000</option>
 								<option>$16,000 - 25,000</option>
