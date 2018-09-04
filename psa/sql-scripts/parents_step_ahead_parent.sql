@@ -4,50 +4,161 @@
 -- ------------------------------------------------------
 -- Server version	8.0.12
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
- SET NAMES utf8 ;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE SCHEMA `psa`;
 
---
--- Table structure for table `parent`
---
+USE `psa`;
 
-DROP TABLE IF EXISTS `parent`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `parent` (
-  `idParent` int(11) NOT NULL AUTO_INCREMENT,
-  `firstName` varchar(45) DEFAULT NULL,
-  `lastName` varchar(45) DEFAULT NULL,
-  `countryOfOrigin` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idParent`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+/* Table Creation */
 
---
--- Dumping data for table `parent`
---
+CREATE TABLE `psa`.`parent` (
+  `IdParent` int(11) NOT NULL,
+  `FirstName` VARCHAR(45) NOT NULL,
+  `LastName` VARCHAR(45) NOT NULL,
+  `IdAddress` INT(11) NOT NULL,
+  `HomePhone` VARCHAR(15) NULL,
+  `OfficePhone` VARCHAR(15) NULL,
+  `MobilePhone` VARCHAR(15) NULL,
+  PRIMARY KEY (`IdParent`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-LOCK TABLES `parent` WRITE;
-/*!40000 ALTER TABLE `parent` DISABLE KEYS */;
-INSERT INTO `parent` VALUES (6,'Einer','Agredo','Colombia'),(7,'Evelyn','Sanchez Agredo','USA'),(9,'Ana','Agredo','Guatemala');
-/*!40000 ALTER TABLE `parent` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+CREATE TABLE `psa`.`child` (
+  `IdChild` int(11) NOT NULL,
+  `FirstName` varchar(45) NOT NULL,
+  `LastName` varchar(45) NOT NULL,
+  `IdParent` int(11) NOT NULL,
+  `IdSchool` int(11) NOT NULL,
+  `IdAddress` INT(11) NOT NULL,
+  `HomePhone` varchar(15) DEFAULT NULL,
+  `MobilePhone` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`IdChild`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  
+CREATE TABLE `psa`.`school` (
+  `IdSchool` int(11) NOT NULL,
+  `SchoolName` varchar(45) NOT NULL,
+  `IdAddress` INT(11) NOT NULL,
+  `ContactName` varchar(255) DEFAULT NULL,
+  `Phone1` varchar(15) DEFAULT NULL,
+  `Phone2` varchar(15) DEFAULT NULL,
+  `Comments` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`IdSchool`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+CREATE TABLE `psa`.`event` (
+  `IdEvent` INT(11) NOT NULL,
+  `NameEvent` VARCHAR(255) NOT NULL,
+  `DateEvent` DATETIME NOT NULL,
+  `IdAddress` INT(11) NOT NULL,
+  `Comments` VARCHAR(255) NULL,
+  PRIMARY KEY (`IdEvent`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dump completed on 2018-08-26 22:44:13
+CREATE TABLE `psa`.`address` (
+  `IdAddress` INT(11) NOT NULL,
+  `City` VARCHAR(255) NOT NULL,
+  `State` VARCHAR(255) NOT NULL,
+  `Zipcode` VARCHAR(255) NULL,
+  `Address` VARCHAR(255) NOT NULL,
+  `Comments` VARCHAR(255) NULL,
+  PRIMARY KEY (`IdAddress`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `psa`.`assistants` (
+  `IdAssistant` INT(11) NOT NULL,
+  `IdEvent` INT(11) NOT NULL,
+  `IdParent` int(11) NOT NULL,
+  PRIMARY KEY (`IdAssistant`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+/* Indexes */
+
+ALTER TABLE `psa`.`address` 
+ADD INDEX `IdAddressIDX` (`IdAddress` ASC);
+;
+
+ALTER TABLE `psa`.`parent` 
+ADD INDEX `IdParentIDX` (`IdParent` ASC);
+;
+
+ALTER TABLE `psa`.`event` 
+ADD INDEX `IdEventIDX` (`IdEvent` ASC);
+;
+
+ALTER TABLE `psa`.`school` 
+ADD INDEX `IdSchoolIDX` (`IdSchool` ASC);
+;
+
+ALTER TABLE `psa`.`child` 
+ADD INDEX `IdChildIDX` (`IdChild` ASC);
+;
+
+ALTER TABLE `psa`.`assistants` 
+ADD INDEX `IdAssistantIDX` (`IdAssistant` ASC);
+;
+
+/* Foreign keys */
+
+ALTER TABLE `psa`.`parent` 
+ADD INDEX `IdAddressIDX3` (`IdAddress` ASC);
+ALTER TABLE `psa`.`parent` 
+ADD CONSTRAINT `ParentAddress`
+  FOREIGN KEY (`IdAddress`)
+  REFERENCES `psa`.`address` (`IdAddress`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+  
+ALTER TABLE `psa`.`school` 
+ADD INDEX `IdAddressIDX4` (`IdAddress` ASC);
+ALTER TABLE `psa`.`school` 
+ADD CONSTRAINT `SchoolAddress`
+  FOREIGN KEY (`IdAddress`)
+  REFERENCES `psa`.`address` (`IdAddress`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `psa`.`event` 
+ADD INDEX `IdAddressIDX5` (`IdAddress` ASC);
+ALTER TABLE `psa`.`event` 
+ADD CONSTRAINT `EventAddress`
+  FOREIGN KEY (`IdAddress`)
+  REFERENCES `psa`.`address` (`IdAddress`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+ 
+ALTER TABLE `psa`.`child` 
+ADD INDEX `IdParentIDX2` (`IdParent` ASC),
+ADD INDEX `IdSchoolIDX2` (`IdSchool` ASC),
+ADD INDEX `IdAddressIDX2` (`IdAddress` ASC);
+ALTER TABLE `psa`.`child` 
+ADD CONSTRAINT `ChildParent`
+  FOREIGN KEY (`IdParent`)
+  REFERENCES `psa`.`parent` (`IdParent`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+ADD CONSTRAINT `ChildSchool`
+  FOREIGN KEY (`IdSchool`)
+  REFERENCES `psa`.`school` (`IdSchool`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+ADD CONSTRAINT `ChildAddress`
+  FOREIGN KEY (`IdAddress`)
+  REFERENCES `psa`.`address` (`IdAddress`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `psa`.`assistants` 
+ADD INDEX `IdParentIDX6` (`IdParent` ASC),
+ADD INDEX `IdEventIDX6` (`IdEvent` ASC);
+ALTER TABLE `psa`.`assistants` 
+ADD CONSTRAINT `AssistancsParent`
+  FOREIGN KEY (`IdParent`)
+  REFERENCES `psa`.`parent` (`IdParent`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+ADD CONSTRAINT `AssistancsEvent`
+  FOREIGN KEY (`IdEvent`)
+  REFERENCES `psa`.`event` (`IdEvent`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+ 
