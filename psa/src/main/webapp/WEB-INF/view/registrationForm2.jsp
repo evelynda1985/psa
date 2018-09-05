@@ -17,9 +17,11 @@
 	crossorigin="anonymous">
 
 
-<link type="text/css" rel="stylesheet"
-	href='<spring:url value="/resources/css/style.css" htmlEscape="true"/>' />
+<link type="text/css" rel="stylesheet" href='<spring:url value="/resources/css/style.css" htmlEscape="true"/>' />
 
+ 
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 
 
 <title>Parents Step Ahead Login page</title>
@@ -41,7 +43,7 @@
 				<p class="text-white"> <small>We'll never share your information with anyone else.</small></p> 
 				<br>
 
-				<form>
+				<form id="registrationForm" action="childrenInformation">
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="inputSchoolEvent">Event school name</label> <select
@@ -65,12 +67,13 @@
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="phoneNumber">Phone Number</label> <input type="text"
+							<label for="phoneNumber">Phone Number</label> 
+							<input type="text" maxlength="10" onkeypress="isNumberKey(event)"
 								class="form-control" id="phoneNumber" placeholder="Phone Number">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="email">Email</label> <input type="text"
-								class="form-control" id="email" placeholder="email">
+							<label for="email">Email</label> 
+							<input type="email" class="form-control error" id="email" placeholder="email" name="email"  required="required">
 						</div>
 					</div>
 
@@ -103,8 +106,9 @@
 							</select>
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputAddressZip">Zip Code</label> <input type="text"
-								class="form-control" id="inputAddressZip" placeholder="Zip Code">
+							<label for="inputAddressZip">Zip Code</label> 
+							<input type="text" maxlength="5" onkeypress="isNumberKey(event)"
+							class="form-control" id="inputAddressZip" placeholder="Zip Code">
 						</div>
 					</div>
 
@@ -116,8 +120,8 @@
 						<div class="col"></div>
 						<div class="col"></div>
 						<div class="col">
-							<button type="submit" class="btn btn-primary"
-								onclick="window.location.href='childrenInformation'; return false;">Next</button>
+						<input type="submit" value="Next" id="btnValidate" class="btn btn-primary">
+								
 							<br> <br>
 						</div>
 					</div>
@@ -130,7 +134,9 @@
 		</div>
 	</div>
 
-
+	
+	<script src="./resources/js/registrationFormValidation.js"></script>
+	
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

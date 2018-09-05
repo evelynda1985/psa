@@ -29,3 +29,6 @@ i{
 	text-align: center;
 }
 
+form.registrationForm label.error, label.error {
+    color: red;
+}

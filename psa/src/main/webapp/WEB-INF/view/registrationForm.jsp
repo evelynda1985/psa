@@ -48,13 +48,13 @@
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="parentFirstName">First Name</label>
-							<form:input path="firstName" type="text" class="form-control"
+							<form:input path="firstName" type="text" class="form-control" onkeypress="isCharacter(event)"
 								id="parentFirstName" placeholder="First Name" />
 						</div>
 
 						<div class="form-group col-md-6">
 							<label for="parentLastName">Last Name</label>
-							<form:input path="lastName" type="text" class="form-control"
+							<form:input path="lastName" type="text" class="form-control" onkeypress="isCharacter(event)"
 								id="parentLastName" placeholder="Last Name" />
 						</div>
 					</div>
@@ -150,7 +150,7 @@
 		</div>
 	</div>
 
-
+	<script src="./resources/js/registrationFormValidation.js"></script>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -67,9 +67,7 @@ public class Parent{
 	private List<Child> childrenList;
 	
 	//constructors
-
 	public Parent() {}
-
 	public Parent(String firstName, String lastName, String gender, String civilStatus, String countryOfOrigin,
 			String educationLevel, int salaryRange, int numberOfChildren, int phoneNumber, String email) {
 		this.firstName = firstName;
@@ -131,79 +129,60 @@ public class Parent{
 	public String getGender() {
 		return gender;
 	}
-
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
 	public String getCivilStatus() {
 		return civilStatus;
 	}
-
 	public void setCivilStatus(String civilStatus) {
 		this.civilStatus = civilStatus;
 	}
-
 	public String getCountryOfOrigin() {
 		return countryOfOrigin;
 	}
-
 	public void setCountryOfOrigin(String countryOfOrigin) {
 		this.countryOfOrigin = countryOfOrigin;
 	}
-
 	public String getEducationLevel() {
 		return educationLevel;
 	}
-
 	public void setEducationLevel(String educationLevel) {
 		this.educationLevel = educationLevel;
 	}
-
 	public int getSalaryRange() {
 		return salaryRange;
 	}
-
 	public void setSalaryRange(int salaryRange) {
 		this.salaryRange = salaryRange;
 	}
-
 	public int getNumberOfChildren() {
 		return numberOfChildren;
 	}
-
 	public void setNumberOfChildren(int numberOfChildren) {
 		this.numberOfChildren = numberOfChildren;
 	}
-
 	public int getPhoneNumber() {
 		return phoneNumber;
 	}
-
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 	public Address getAddress() {
 		return address;
 	}
-
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-
 	public List<Child> getChildrenList() {
 		return childrenList;
 	}
-
 	public void setChildrenList(List<Child> childrenList) {
 		this.childrenList = childrenList;
 	}
