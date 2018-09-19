@@ -22,10 +22,7 @@ public class Parent{
 	@Column(name="lastName")
 	private String lastName;
 	
-	@Column(name="countryOfOrigin")
-	private String countryOfOrigin;
-	
-	/*@Column(name="gender")
+	@Column(name="gender")
 	private String gender;
 	
 	@Column(name="civilStatus")
@@ -38,9 +35,9 @@ public class Parent{
 	private String educationLevel;
 	
 	@Column(name="salaryRange")
-	private int salaryRange;
+	private String salaryRange;
 	
-	@Column(name="numberOfChildren")
+	/*@Column(name="numberOfChildren")
 	private int numberOfChildren;
 	
 	@Column(name="phoneNumber")
@@ -76,10 +73,24 @@ public class Parent{
 	
 	//Temporal constructor
 	public Parent() {}
+	
 	public Parent(String firstName, String lastName, String countryOfOrigin) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.countryOfOrigin = countryOfOrigin;
+	}
+	
+	
+	
+	public Parent(String firstName, String lastName, String gender, String civilStatus, String countryOfOrigin,
+			String educationLevel) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.gender = gender;
+		this.civilStatus = civilStatus;
+		this.countryOfOrigin = countryOfOrigin;
+		this.educationLevel = educationLevel;
 	}
 	
 	
@@ -115,25 +126,19 @@ public class Parent{
 	public void setCountryOfOrigin(String countryOfOrigin) {
 		this.countryOfOrigin = countryOfOrigin;
 	}
-
-/*
+	
 	public String getGender() {
 		return gender;
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	
 	public String getCivilStatus() {
 		return civilStatus;
 	}
 	public void setCivilStatus(String civilStatus) {
 		this.civilStatus = civilStatus;
-	}
-	public String getCountryOfOrigin() {
-		return countryOfOrigin;
-	}
-	public void setCountryOfOrigin(String countryOfOrigin) {
-		this.countryOfOrigin = countryOfOrigin;
 	}
 	public String getEducationLevel() {
 		return educationLevel;
@@ -141,13 +146,14 @@ public class Parent{
 	public void setEducationLevel(String educationLevel) {
 		this.educationLevel = educationLevel;
 	}
-	public int getSalaryRange() {
+	
+	public String getSalaryRange() {
 		return salaryRange;
 	}
-	public void setSalaryRange(int salaryRange) {
+	public void setSalaryRange(String salaryRange) {
 		this.salaryRange = salaryRange;
 	}
-	public int getNumberOfChildren() {
+	/*public int getNumberOfChildren() {
 		return numberOfChildren;
 	}
 	public void setNumberOfChildren(int numberOfChildren) {
