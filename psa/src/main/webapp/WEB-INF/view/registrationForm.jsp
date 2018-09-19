@@ -1,6 +1,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ page isELIgnored="false" %>  
+
 
 <!doctype html>
 <html lang="en">
@@ -59,6 +61,7 @@
 						</div>
 					</div>
 
+					
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="inputGender">Gender</label> <select id="inputGender"
@@ -69,6 +72,7 @@
 								<option>Other</option>
 							</select>
 						</div>
+						
 						<div class="form-group col-md-6">
 							<label for="inputCivilStatus">Civil status</label> <select
 								id="inputCivilStatus" class="form-control">
@@ -95,28 +99,19 @@
 							</form:select>
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputEducationLevel">Education level</label> <select
-								id="inputEducationLevel" class="form-control">
-								<option selected>Choose...</option>
-								<option>Elementary</option>
-								<option>Middle</option>
-								<option>High School</option>
-								<option>College</option>
-								<option>None</option>
-							</select>
+							<label for="inputEducationLevel">Education level</label>
+							<form:select path="educationLevel" id="inputEducationLevel" class="form-control">
+								<form:options  items="${educationLevelOptModel}"></form:options>
+							</form:select>							
 						</div>
 					</div>
 
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputIncome">Annual household income</label> <select
-								id="inputIncome" class="form-control">
-								<option selected>Choose...</option>
-								<option>$10,000 - 15,000</option>
-								<option>$16,000 - 25,000</option>
-								<option>$26,000 - 40,000</option>
-								<option>$51,000 +</option>
-							</select>
+							<label for="inputIncome">Annual household income</label> 
+							<form:select path="salaryRange" id="inputIncome" class="form-control">
+								<form:options items="${incomeOptModel}"></form:options>
+							</form:select>
 						</div>
 						<div class="form-group col-md-6"></div>
 					</div>
