@@ -87,12 +87,7 @@ public class ParentController {
 	}
 	
 	public void initIncome(Model model) {
-		ArrayList<String> incomeOptions = new ArrayList<>();
-		incomeOptions.add("Choose...");
-		incomeOptions.add("$10,000 - 15,000");
-		incomeOptions.add("$16,000 - 25,000");
-		incomeOptions.add("$26,000 - 40,000");
-		incomeOptions.add("$51,000 +");
+		ArrayList<String> incomeOptions = parentService.getIncomeOptions();
 		model.addAttribute("incomeOptModel", incomeOptions);
 	}
     

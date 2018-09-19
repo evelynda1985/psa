@@ -1,5 +1,6 @@
 package org.parentsstepahead.application.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -69,16 +70,13 @@ public class ParentDaoImplementation implements ParentDao {
                       		 
 		return parentsList;
 	}
-	
-	/*public List<String> getGenderOptions(){
-		Session currentSession = sessionFactory.getCurrentSession();
-		Query theQuery = null;
-		theQuery = currentSession.createQuery("select gender from Parent", Parent.class);
-		List<String> genderOptions = theQuery.getResultList();
-		
-		return genderOptions;
-	}*/
-	
+
+	@Override
+	public ArrayList<String> getIncomeOptions() {
+		Parent parent = new Parent();
+		ArrayList<String> incomeOptions = parent.getIncomeOptions();
+		 return incomeOptions;
+	}
 	
 
 }

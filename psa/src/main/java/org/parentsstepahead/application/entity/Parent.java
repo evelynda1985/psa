@@ -1,11 +1,15 @@
 package org.parentsstepahead.application.entity;
 
+import java.util.ArrayList;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.ui.Model;
 
 @Entity
 @Table(name="parent")
@@ -36,6 +40,8 @@ public class Parent{
 	
 	@Column(name="salaryRange")
 	private String salaryRange;
+	
+	private ArrayList<String> incomeOptions = new ArrayList<>();
 	
 	/*@Column(name="numberOfChildren")
 	private int numberOfChildren;
@@ -153,6 +159,16 @@ public class Parent{
 	public void setSalaryRange(String salaryRange) {
 		this.salaryRange = salaryRange;
 	}
+
+	public ArrayList<String> getIncomeOptions() {
+		incomeOptions.add("Choose...");
+		incomeOptions.add("$10,000 - 15,000");
+		incomeOptions.add("$16,000 - 25,000");
+		incomeOptions.add("$26,000 - 40,000");
+		incomeOptions.add("$51,000 +");
+		return incomeOptions;
+	}
+	
 	/*public int getNumberOfChildren() {
 		return numberOfChildren;
 	}
