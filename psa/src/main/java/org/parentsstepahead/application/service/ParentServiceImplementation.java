@@ -1,5 +1,6 @@
 package org.parentsstepahead.application.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.parentsstepahead.application.dao.ParentDao;
@@ -31,23 +32,27 @@ public class ParentServiceImplementation implements ParentService {
 	@Override
 	@Transactional
 	public Parent getParent(int theId) {
-		
 		return parentDao.getParent(theId);
 	}
 
 	@Override
 	@Transactional
 	public void deleteParent(int theId) {
-		
 		parentDao.deleteParent(theId);
-		
 	}
 
 	@Override
 	@Transactional
 	public List<Parent> searchParents(String theSearchName) {
-		
 		return parentDao.searchParents(theSearchName);
 	}
+
+	@Override
+	@Transactional
+	public ArrayList<String> getIncomeOptions() {
+		return parentDao.getIncomeOptions();
+	}
+	
+	
 
 }
